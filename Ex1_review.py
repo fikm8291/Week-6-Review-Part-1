@@ -1,115 +1,101 @@
 # -------------------------------------------
-# Exercise 1: Revision
+# Exercise 1: Revision & String Methods
 # -------------------------------------------
-# In this exercise, you’ll review the core Python concepts you’ve learned so far
-# (variables, input, if/else, loops, and operators)
-# and also explore one *new idea*: **string methods**.
 #
+# GOAL:
+# 1. Review core concepts: variables, input, if/else, loops, and operators.
+# 2. Master String Methods: .lower(), .upper(), and .strip().
+# 3. Practise the Core Git Workflow: Stage -> Commit -> Push.
+#
+# CONCEPT:
 # String methods are built-in functions that let you modify or check text easily.
-# Example:
-#   text = "HELLO"
-#   print(text.lower())  # makes the text lowercase → "hello"
+# - .lower() converts text to lowercase (e.g. "Apple" becomes "apple").
+# - .upper() converts text to uppercase (e.g. "apple" becomes "APPLE").
+# - .strip() removes "whitespace" (extra spaces) from the start and end of a string.
 #
-# You’ll see some new methods in this exercise like:
-#   .lower()   → converts text to lowercase
-#   .upper()   → converts text to uppercase
-#   .strip()   → removes extra spaces before/after a word
-#
-# Don’t worry — we’ll explain what each one does as you use it.
 # -------------------------------------------
 
 
+# -------------------------------------------
 # Task 1: User Input & Variables Review
 # -------------------------------------------
 print("-------------------------------------------\n"
     + "Task 1: User Input & Variables Review\n"
     + "-------------------------------------------")
-# In this task, you’ll practise collecting input and using variables.
+
+# DEMO: How to use a string method
+# -------------------------------------------
+# To use a method, you put a dot '.' after the variable name, 
+# then the method name followed by brackets ().
 #
+# example_word = "  PYTHON  "
+# clean_word = example_word.strip()  # Removes spaces -> "PYTHON"
+# lower_word = clean_word.lower()    # Makes lowercase -> "python"
+# -------------------------------------------
+
 # TODO:
 # 1. Ask the user for their name and age.
-# 2. Use the .strip() method on their name to remove any extra spaces.
-# 3. Convert their age to an integer using int() — because input() gives you a string!
-# 4. Print a friendly message with their name and age.
+# 2. Use the .strip() method on their name to remove any accidental extra spaces.
+# 3. Convert their age to an integer using int().
+# 4. Print a friendly message using an f-string.
 #
-# Example:
-# Enter your name:   Alice
-# Enter your age:  20
-# Output: "Hello, Alice! You are 20 years old."
-#
-# Hint: Remember to use f-strings for clear formatting.
-#
+# EXPECTED OUTPUT:
+# Enter your name:    Alice   
+# Enter your age: 20
+# Hello, Alice! You are 20 years old.
+
 # Write your code below:
 
 
-
-
+# -------------------------------------------
 # Task 2: Decision Making (if / else)
 # -------------------------------------------
-print("-------------------------------------------\n"
+print("\n-------------------------------------------\n"
     + "Task 2: Decision Making (if / else)\n"
     + "-------------------------------------------")
-# Let’s review conditional logic.
-#
+
 # TODO:
 # 1. Ask the user for their favourite colour.
-# 2. Use the .lower() method to make their answer lowercase (so “Blue” and “blue” both work). 
+# 2. Use the .lower() method to "normalise" their answer so capital letters don't break your logic.
 # 3. Use if/elif/else to:
-#    - Print “Nice choice!” if the colour is “blue”.
-#    - Print “That’s a bright choice!” if the colour is “yellow”.
-#    - Otherwise, print “That’s an interesting colour!”
-#
-# Example:
-# Enter your favourite colour: BLUE
-# Output: "Nice choice!"
-#
+#    - Print "Nice choice!" if the colour is "blue".
+#    - Print "That’s a bright choice!" if the colour is "yellow".
+#    - Otherwise, print "That’s an interesting colour!"
+
 # Write your code below:
 
 
-
-
-# Task 3: Loops Review (for and while)
 # -------------------------------------------
-print("-------------------------------------------\n"
-    + "Task 3: Loops Review (for and while)\n"
+# Task 3: Multiplication Table (For Loops)
+# -------------------------------------------
+print("\n-------------------------------------------\n"
+    + "Task 3: Multiplication Table\n"
     + "-------------------------------------------")
-# Here, you’ll combine loops with input and conditions.
-#
+
 # TODO:
 # 1. Ask the user for a number between 1 and 10.
-# 2. Use int() to convert it into an integer.
-# 3. Use a for loop to print the multiplication table for that number (1 to 10).
-# 4. After the for loop, ask: “Do you want to try another number? (yes/no)”
-# 5. Use a while loop to repeat the program while the user answers “yes”.
-# 6. Use .lower() to make the answer comparison work even if they type “YES” or “Yes”.
+# 2. Use a for loop and the range() function to print the multiplication table 
+#    for that number (from 1 up to 10).
 #
-# Hint: The while loop will continue until the user types “no”.
-#
-# Example:
+# EXPECTED OUTPUT:
 # Enter a number: 3
 # 3 x 1 = 3
-# 3 x 2 = 6
-# 3 x 3 = 9
-# (Continue until 3 x 10)
 # ...
-# Do you want to try another number? yes
-# (loops again)
-#
+# 3 x 10 = 30
+
 # Write your code below:
 
 
-
-
 # -------------------------------------------
-# Submitting Your Work (after Tasks 1–3)
+# SAVING YOUR WORK
 # -------------------------------------------
-# Once you’ve completed the 3 basic tasks:
-# 1. Save your file
-# 2. Open the terminal
-# 3. Use Git to:
-#    - Stage your changes
-#    - Commit your changes
-#    - Push your changes to the external repository
+# You have completed the Core Tasks. Let's save.
+# 1. Save this file (Ctrl+S or Cmd+S).
+# 2. Open the terminal.
+# 3. Run:
+#    git add Ex1_revision.py
+#    git commit -m "Completed core revision tasks"
+#    git push origin main
 # -------------------------------------------
 
 
@@ -119,116 +105,97 @@ print("-------------------------------------------\n"
 
 # Extension 1: Username Generator
 # -------------------------------------------
-print("-------------------------------------------\n"
+print("\n-------------------------------------------\n"
     + "Extension 1: Username Generator\n"
     + "-------------------------------------------")
-# Create a small program that builds a simple username.
-#
+
 # TODO:
-# 1. Ask the user for their first name and favourite number.
-# 2. Convert the name to lowercase using .lower().
-# 3. Combine them into a username and print it.
-# Example:
-# Enter your first name: Alice
-# Enter your favourite number: 7
-# Output: "Your username could be: alice7"
-#
+# 1. Ask the user for their first name and their favourite number.
+# 2. Convert the name to lowercase.
+# 3. Combine them into a single string to create a username.
+# 4. Print: "Your username could be: [username]"
+
 # Write your code below:
-
-
 
 
 # Extension 2: Counting with Conditions
 # -------------------------------------------
-print("-------------------------------------------\n"
+print("\n-------------------------------------------\n"
     + "Extension 2: Counting with Conditions\n"
     + "-------------------------------------------")
-# Let’s practise loops and comparison operators.
-#
+
 # TODO:
 # 1. Ask the user for a number (int).
-# 2. Use a for loop to print all numbers from 1 up to that number.
-# 3. If a number is even, print “Even number found!”
-# 4. If it’s odd, print “Odd number found!”
+# 2. Use a for loop to iterate from 1 up to that number.
+# 3. Inside the loop, use the modulus operator (%) to check if the current 
+#    number is Even or Odd, and print the result for each number.
 #
-# Hint: Use the modulus operator % to check even/odd.
-# Example: if num % 2 == 0 → even number.
-#
+# Hint: if number % 2 == 0:
+
 # Write your code below:
 
 
-
-
-# Extension 3: Simple Password Checker
+# Extension 3: Secure Password Checker (While Loops)
 # -------------------------------------------
-print("-------------------------------------------\n"
-    + "Extension 3: Simple Password Checker\n"
+print("\n-------------------------------------------\n"
+    + "Extension 3: Secure Password Checker\n"
     + "-------------------------------------------")
-# Create a mini login system.
-#
+
 # TODO:
-# 1. Set a variable called password and assign it a value (e.g. "python123"). We want to store the correct password here.
-# 2. Ask the user to enter a password.
-# 3. Use .strip() and .lower() to normalise (take out spaces and convert to lowercase) their input.
-# 4. Use an if statement to check if it matches your stored password.
-# 5. If correct, print “Access granted.”
-# 6. Otherwise, print “Access denied.”
-# 7. Allow up to 3 attempts using a while loop.
-#
-# Hint: You’ll need a counter variable to track attempts.
-#
-# Example:
-# Enter password: python123
-# Output: Access granted.
-#
+# 1. Set a variable 'correct_password' to "python123".
+# 2. Create a variable 'attempts' starting at 3.
+# 3. Use a while loop to let the user try to log in.
+# 4. The loop should continue while attempts are greater than 0.
+# 5. Inside the loop:
+#    - Ask for the password and use .strip().lower() on the input.
+#    - If it matches, print "Access granted" and use 'break' to stop the loop.
+#    - If it's wrong, subtract 1 from attempts and print how many tries are left.
+
 # Write your code below:
 
 
+# -------------------------------------------
+# SAVING YOUR WORK
+# -------------------------------------------
+# You have completed the Extensions. Let's save.
+# 1. Save this file.
+# 2. Run:
+#    git add Ex1_revision.py
+#    git commit -m "Completed revision extensions"
+#    git push origin main
+# -------------------------------------------
 
 
 # -------------------------------------------
-# ADVANCED ACTIVITY
+# ADVANCED ACTIVITY: Student Score Checker
 # -------------------------------------------
-print("-------------------------------------------\n"
-    + "ADVANCED ACTIVITY\n"
+print("\n-------------------------------------------\n"
+    + "ADVANCED ACTIVITY: Student Score Checker\n"
     + "-------------------------------------------")
-# Combine everything you’ve learned into a mini interactive program!
+
+# TODO:
+# 1. Ask the user for a student’s name and three separate test scores.
+# 2. Calculate the average of the three scores.
+# 3. Use logic to determine a grade feedback:
+#    - 70 or more: "Excellent!"
+#    - 50 to 69: "Good effort!"
+#    - Below 50: "Needs improvement."
+# 4. Print a summary. Use .title() on the student's name so it looks professional.
 #
-# Mini Challenge: “Student Score Checker”
-# -------------------------------------------
-# 1. Ask the user for a student’s name and three test scores.
-# 2. Use int() to convert each score to an integer.
-# 3. Calculate the average score.
-# 4. Use if/elif/else to give feedback:
-#    - 70 or more → "Excellent!"
-#    - 50–69 → "Good effort!"
-#    - below 50 → "Needs improvement."
-# 5. Print a summary showing the student name (using .title()), scores, and average.
-#
-# Example:
-# Enter name:   emma
-# Enter score 1: 70
-# Enter score 2: 65
-# Enter score 3: 80
-# Output:
+# EXPECTED OUTPUT:
 # Student: Emma
-# Average: 71.7
-# Excellent!
-#
+# Average Score: 71.7
+# Feedback: Excellent!
+
 # Write your code below:
 
 
-
-
 # -------------------------------------------
-# Submitting Your Work
+# SAVING YOUR WORK
 # -------------------------------------------
-# Once you’ve completed all tasks:
-# 1. Save your file
-# 2. Open the terminal
-# 3. Use Git to:
-#    - Stage your changes
-#    - Commit your changes
-#    - Push your changes to the external repository
-# Optional: Check GitHub to confirm your changes appear.
+# 1. Save this file.
+# 2. Run:
+#    git add Ex1_revision.py
+#    git commit -m "Completed student score checker"
+#    git push origin main
 # -------------------------------------------
